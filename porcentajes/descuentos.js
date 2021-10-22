@@ -11,8 +11,11 @@
 //     precioDescuento
 // });
 
-function calcularPrecio (precio,descuento) {
-    const porcentajePrecioDescuento = 100 - descuento;
-    const precioDescuento = (precio * porcentajePrecioDescuento) / 100;
-    return precioDescuento;
+function calcularPrecio () {
+    const porcentajeDescuento = document.getElementById("discount--input").value;
+    const precioOriginal = document.getElementById("price--input").value;
+
+    const precioDescuento = ((100 - porcentajeDescuento) * precioOriginal) / 100;
+    const resultado = document.getElementById("price--result");
+    resultado.innerHTML = `El precio del producto con ${porcentajeDescuento}% de descuento es $${precioDescuento}`; 
 }
