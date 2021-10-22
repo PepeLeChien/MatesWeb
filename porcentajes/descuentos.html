@@ -13,20 +13,38 @@
     </header>
     <main>
         <h2>Porcentajes y Descuentos</h2>
-        <section class="discount__container">
-            <h3>Calcula el descuento de un producto</h3>
-            <form>
-                <label for="price--input" class="price--label">
-                    Escribe el precio de tu producto ($)
-                </label>
-                <input type="number" id="price--input" class="price--input">
-                <label for="discount--input" class="discount--label">
-                    Escribe el descuento de tu producto (%)
-                </label>
-                <input type="number" id="discount--input" class="discount--input">
-                <button type="button" onclick="calcularPrecio()">Calcular precio</button>
-            </form>
-            <p class="price--result" id="price--result"></p>
+        <section class="sections__container">
+            <section class="discount__container">
+                <h3>Calcula el descuento de un producto</h3>
+                <form>
+                    <label for="price--input" class="price--label">
+                        Escribe el precio de tu producto ($)
+                    </label>
+                    <input type="number" id="price--input" class="price--input">
+                    <label for="discount--input" class="discount--label">
+                        Escribe el descuento de tu producto (%)
+                    </label>
+                    <input type="number" id="discount--input" class="discount--input">
+                    <button type="button" onclick="calcularPrecio()" class="discount--button">Calcular precio</button>
+                </form>
+                <p class="price--result" id="price--result"></p>
+            </section>
+
+            <section class="coupon__container">
+                <h3>Calcula el precio con cupón</h3>
+                <form>
+                    <label for="coup-price--input" class="coup-price--label">
+                        Escribe el precio de tu producto ($)
+                    </label>
+                    <input type="number" id="coup-price--input" class="coup-price--input">
+                    <label for="coup-discount--input" class="coup-discount--label">
+                        Selecciona tu cupón (%)
+                    </label>
+                    <input type="text" id="coup-discount--input" class="coup-discount--input">
+                    <button type="button" onclick="calcularCupon()" class="coupon--button">Calcular precio</button>
+                </form>
+                <p class="coup-price--result" id="coup-price--result"></p>
+            </section>
         </section>        
     </main>
 
