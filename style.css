@@ -20,17 +20,38 @@ input[type=number] { -moz-appearance:textfield; }
 
 
 header {
-    display: flex;
+    display: grid;
     width: 100%;
     height: 60px;
-    background-color: #3a887b;
+    background-color: #41a090;
     justify-content: center;
     align-items: center;
+    grid-template-columns: 1fr auto 1fr;
 }
 header h1 {
     font-size: 4.6rem;
     color: #fff;
+    grid-column: 2 / 3;
 }
+header nav {
+    justify-self: flex-end;
+}
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+header nav ul a {
+    text-decoration: none;
+    color: #fff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+header nav ul a:hover {
+    background-color: #368073;
+}
+
 main {
     width: 100%;
     height: calc(100vh - 60px);
@@ -56,7 +77,7 @@ main .figures {
 .figures > section {
     width: 100%;
     height: auto;
-    background-color: #298fFE;
+    background-color: #b1d0f1;
     padding: 15px;
     border-radius: 20px;
     display: flex;
@@ -94,7 +115,7 @@ main .figures {
     padding: 2px;
     text-align: center;
     font-size: 100%;
-    background-color: #2aa38f;
+    background-color: #97b4d2;
     color: #fff;
 }
 
@@ -112,7 +133,7 @@ main .figures {
 .circle--buttons__container button {
     width: 40%;
     height: 30px;
-    background-color: #2aa38f;
+    background-color: #97b4d2;
     font-weight: bold;
     color: #fff;
     border: 1px solid #fff;

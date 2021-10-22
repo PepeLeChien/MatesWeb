@@ -10,6 +10,12 @@
 <body>
     <header>
         <h1>Descuentos</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Areas Y Perimetros</a></li>
+                <li><a href="../promedios/promedios.html">Promedios</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <h2>Porcentajes y Descuentos</h2>
@@ -38,9 +44,9 @@
                     </label>
                     <input type="number" id="coup-price--input" class="coup-price--input">
                     <label for="coup-discount--input" class="coup-discount--label">
-                        Selecciona tu cupón (%)
+                        Escribe tu cupón
                     </label>
-                    <input type="text" id="coup-discount--input" class="coup-discount--input">
+                    <input type="text" id="coup-discount--input" class="coup-discount--input" autocomplete="off">
                     <button type="button" onclick="calcularCupon()" class="coupon--button">Calcular precio</button>
                 </form>
                 <p class="coup-price--result" id="coup-price--result"></p>
