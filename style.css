@@ -1,0 +1,220 @@
+:root {
+    --primary-color: #F0CC4E;
+    --secondary--color: #f5d284;
+    --third-color: #cb6565;
+    --footer-color: #b52121;
+    --background-color: #f0efed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+header {
+    width: 100%;
+    min-width: 320px;
+    height: 60px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color:var(--primary-color);
+    align-items: center;
+}
+header section {
+    display: flex;
+    font-size: 2.4rem;
+    margin-left: 8px;
+    align-items: center;
+}
+header section span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(https://www.pngkey.com/png/full/137-1372083_calculator-free-icon-icono-calculadora-blanco-png.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+header h2 {
+    font-size: 2.4rem;
+    text-align: end;
+    margin-right: 4px;
+    align-self: flex-end;
+}
+
+main {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    background-color: var(--background-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+main .calc__info {
+    width: 100%;
+    height: auto;
+}
+.calc__info p {
+    padding: 8px 14px;
+    padding-top: 16px;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+main .calc__options {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center; 
+    padding-bottom: 30px;
+}
+
+.calc__options .link__divs {
+    width: 90%;
+    max-width: 380px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondary--color);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.link__divs div {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 2.8rem;
+    background-color: var(--third-color);
+}
+.link__divs h2 {
+    font-size: 2.8rem;
+    text-align: center;
+}
+.link__divs span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 14px;
+    background-image: url("https://www.shareicon.net/data/2015/10/06/113451_arrow_512x512.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.link__divs img,
+.link__divs p {
+    width: 50%;
+    height: 150px;
+}
+
+.link__divs img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.calc__figures--link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.link__divs p {
+    display: flex;
+    padding: 8px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    background-color: var(--footer-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 0;
+    gap: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer h4 {
+    font-size: 1.8rem;
+}
+
+footer div {
+    display: flex;
+    width: 50%;
+    height: 40px;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+footer div a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+footer div img {
+    width: 100%;
+    height: 100%;
+}
+
+footer nav {
+    width: 100%;
+    height: auto;
+}
+footer nav ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+footer nav ul li {
+    font-size: 1.4rem;
+}
+footer nav ul a {
+    text-decoration: underline 1px #fff;
+}
+
+footer nav ul a:hover {
+    color: #bbb;
+    text-decoration: underline 1px #bbb;
+}
+
+
+footer nav ul li:nth-child(1) {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
