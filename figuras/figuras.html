@@ -5,70 +5,109 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MatesWeb | Figuras</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./figuras.css">
 </head>
 <body>
     <header>
-        <h1>Figuras Geométricas</h1>
-        <nav>
-            <ul>
-                <li><a href="./promedios/promedios.html">Promedios</a></li>
-                <li><a href="../porcentajes/descuentos.html">Descuentos</a></li>
-                <li><a href="./salarios/salarios.html">Salarios</a></li>
-            </ul>
-        </nav>
+        <section>
+            <span></span>
+            <h1>MathWeb</h1>
+        </section>
+        <h2>Figuras Geométricas</h2>
     </header>
     <main>
-        <h2>ÁREAS Y PERÍMETROS</h2>
-        <section class="figures">
-            <section class="figures__square">
-                <h3>Calcula el área y perímetro de un CUADRADO</h3>
-                <form>
-                    <label for="input-cuadrado" class="figures__square--label">
-                        Escribe cuanto mide cada lado de tu cuadrado
-                    </label>
-                    <input type="number" id="input-cuadrado" class="figures__square--input">
-                    <div class="square--buttons__container">
-                        <button type="button" onclick="calcularPerimetroCuadrado()">Calcular perímetro</button>
-                        <button type="button" onclick="calcularAreaCuadrado()">Calcular el área</button>
+        <nav class="calcs__nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../promedios/promedios.html">Promedios</a></li>
+                <li><a href="../porcentajes/descuentos.html">Porcentajes</a></li>
+                <li><a href="../salarios/salarios.html">Salarios</a></li>
+            </ul>
+        </nav>
+        <section class="calcs__figures">
+
+            <section class="calcs__square figure__container">
+                <h3>CUADRADO</h3>
+                <div class="square__background figure__background">
+                    <div></div>
+                    <div>
+                        <p></p>
+                        <p></p>
                     </div>
-                </form>
-                <p class="figures__square--result" id="figures__square--result"></p>
+                </div>
+                <p>Escirbe cuanto mide cada lado de tu cuadrado</p>
+                <div class="square__inputs">
+                    <input type="number" id="input-square">
+                    <button onclick="calcularPerimetroCuadrado()">Calcular Perímetro</button>
+                    <button onclick="calcularAreaCuadrado()">Calcular Área</button>
+                </div>
+                <div class="results">
+                    <p>Resultados:</p>
+                    <p id="result-square">_________</p>
+                </div>
             </section>
-            <section class="figures__triangle">
-                <h3>Calcula el área y perímetro de un TRIÁNGULO</h3>
-                <form>
-                    <label for="input-triangulo-lado1" class="figures__triangle--label">
-                        Escribe cuanto mide cada lado de tu triángulo
-                    </label>
-                    <input type="number" id="input-triangulo-lado1" class="figures__triangle--input" placeholder="Lado 1">
-                    <input type="number" id="input-triangulo-lado2" class="figures__triangle--input" placeholder="Lado 2">
-                    <input type="number" id="input-triangulo-base" class="figures__triangle--input" placeholder="Base">
-                    <input type="number" id="input-triangulo-altura" class="figures__triangle--input" placeholder="Altura">
-                    <div class="triangle--buttons__container">
-                        <button type="button" onclick="calcularPerimetroTriangulo()">Calcular perímetro</button>
-                        <button type="button" onclick="calcularAreaTriangulo()">Calcular el área</button>
-                    </div>
-                </form>
-                <p class="figures__triangle--result" id="figures__triangle--result"></p>
+
+
+            <section class="calcs__triangle figure__container">
+                <h3>TRIÁNGULO</h3>
+                <div class="triangle__background figure__background">
+                    <p></p>
+                </div>
+                <p>Escribe cuando mide cada lado de tu triángulo</p>
+                <div class="triangle__inputs">
+                    <input type="number" placeholder="Lado 1" id="input-triangle-1">
+                    <input type="number" placeholder="Lado 2" id="input-triangle-2">
+                    <input type="number" placeholder="Lado 3 / Base" id="input-triangle-base">
+                    <input type="number" placeholder="Altura" id="input-triangle-height">
+                    <button onclick="calcularPerimetroTriangulo()">Calcular Perímetro</button>
+                    <button onclick="calcularAreaTriangulo()">Calcular Área</button>
+                </div>
+                <div class="results">
+                    <p>Resultados:</p>
+                    <p id="result-triangle">_________</p>
+                </div>
             </section>
-            <section class="figures__circle">
-                <h3>Calcula el área y perímetro de un CIRCULO</h3>
-                <form>
-                    <label for="input-circulo" class="figures__circle--label">
-                        Escribe cuanto mide el radio de tu circulo
-                    </label>
-                    <input type="number" id="input-circulo" class="figures__circle--input">
-                    <div class="circle--buttons__container">
-                        <button type="button" onclick="calcularPerimetroCirculo()">Calcular perímetro</button>
-                        <button type="button" onclick="calcularAreaCirculo()">Calcular el área</button>
-                    </div>
-                </form>
-                <p class="figures__circle--result" id="figures__circle--result"></p>
+
+
+            <section class="calcs__circle figure__container">
+                <h3>CIRCULO</h3>
+                <div class="circle__background figure__background">
+                    <p></p>
+                </div>
+                <p>Escribe cuanto mide el radio de tu circulo</p>
+                <div class="circle__inputs">
+                    <input type="number" id="input-circle">
+                    <button onclick="calcularPerimetroCirculo()">Calcular Perímetro</button>
+                    <button onclick="calcularAreaCirculo()">Calcular Área</button>
+                </div>
+                <div class="results">
+                    <p>Resultados:</p>
+                    <p id="result-circle">_________</p>
+                </div>
             </section>
+
         </section>
     </main>
 
-    <script src="./mates.js"></script>
+    <footer>
+        <h4>Contacto y Redes</h4>
+        <div>
+            <a href="https://github.com/PepeLeChien" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="g"></a>
+            <a href="https://www.facebook.com/Y-Que-Jugamos-748492291935911" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="f"></a>
+            <a href="https://twitter.com/PepeLeChien33" target="_blank"><img src="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-3.png" alt="t"></a>
+            <a href="https://www.instagram.com/fabrizio0943/" target="_blank"><img src="https://www.pngall.com/wp-content/uploads/5/Instagram-Logo-PNG-Image.png" alt="i"></a>
+        </div>
+        <nav>
+            <ul>
+                <li>© 2021 MathWeb | Fabrizio Loza</li>
+                <li><a href="./">Términos de uso</a></li>
+                <li><a href="./">Política de privacidad</a></li>
+                <li><a href="./">Aviso de cookies</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+    <script src="./figuras.js"></script>
 </body>
 </html>
