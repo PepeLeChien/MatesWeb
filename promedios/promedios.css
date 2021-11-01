@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #F0CC4E;
+    --secondary--color: #f5d284;
+    --third-color: #cb6565;
+    --footer-color: #b52121;
+    --background-color: #f0efed;
+    --pag-primary-color: #41a090;
+    --pag-background1-color: #b1d0f1;
+    --pag-background2-color: #97b4d2;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -17,37 +28,86 @@ margin: 0;
 
 input[type=number] { -moz-appearance:textfield; }
 
+
+/* HEADER  */
+
+
 header {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
     width: 100%;
+    min-width: 320px;
     height: 60px;
-    background-color: #0a2a66;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color:var(--primary-color);
+    align-items: center;
+}
+header section {
+    display: flex;
+    margin-left: 8px;
     align-items: center;
 }
 header h1 {
-    font-size: 4.6rem;
-    color: #fff;
-    grid-column: 2 / 3;
+    font-size: 3.6rem;
+}
+header section span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url(https://www.pngkey.com/png/full/137-1372083_calculator-free-icon-icono-calculadora-blanco-png.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+header h2 {
+    font-size: 1.8rem;
+    text-align: end;
+    margin-right: 4px;
+    align-self: flex-end;
 }
 
-header nav {
-    justify-self: flex-end;
+
+/* OTHER PAGES NAV */
+
+
+main {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    background-color: var(--background-color);
 }
-header nav ul {
+
+main .calcs__nav {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.calcs__nav ul {
+    display: flex;
+    width: auto;
+    height: auto;
+    padding: 12px;
+    gap: 20px;
     list-style: none;
-    display: flex;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    white-space: nowrap;
 }
-header nav ul a {
-    text-decoration: none;
-    color: #fff;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-header nav ul a:hover {
-    background-color: #2955a8;
+.calcs__nav ul li {
+    scroll-snap-align: center;
 }
 
+
+.calcs__nav a {
+    display: inline-block;
+    text-decoration: none;
+    height: auto;
+    padding: 4px 8px;
+    background-color: var(--third-color);
+    font-size: 1.8rem;
+    border-radius: 8px;
+    color: #fff;
+}

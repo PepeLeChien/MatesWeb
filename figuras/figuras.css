@@ -79,35 +79,36 @@ main {
 main .calcs__nav {
     width: 100%;
     min-width: 320px;
-    height: 50px;
+    height: auto;
     display: flex;
     justify-content: center;
 }
 
 .calcs__nav ul {
-    width: auto;
-    height: 100%;
-    list-style: none;
     display: flex;
+    width: auto;
+    height: auto;
+    padding: 12px;
     gap: 20px;
-    padding: 0 12px;
-    align-items: center;
+    list-style: none;
     overflow-x: scroll;
     overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
+    white-space: nowrap;
 }
-
 .calcs__nav ul li {
     scroll-snap-align: center;
-    width: auto;
-    height: 30px;
+}
+
+
+.calcs__nav a {
+    display: inline-block;
+    text-decoration: none;
+    height: auto;
     padding: 4px 8px;
     background-color: var(--third-color);
     font-size: 1.8rem;
     border-radius: 8px;
-}
-.calcs__nav ul a {
-    text-decoration: none;
     color: #fff;
 }
 
@@ -119,7 +120,7 @@ main .calcs__nav {
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    padding: 30px 20px 50px;
+    padding: 15px 20px 50px;
     font-family: Arial, Helvetica, sans-serif;
 }
 

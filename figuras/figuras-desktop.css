@@ -5,7 +5,7 @@ header h2 {
 main .calcs__nav {
     justify-content: left;
 }
-.calcs__nav ul a:hover li {
+.calcs__nav ul a:hover {
     background-color: var(--pag-primary-color);
     box-shadow: 4px 4px 3px 0 #bbb;
 }
