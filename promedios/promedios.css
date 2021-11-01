@@ -124,6 +124,7 @@ main .calcs__container {
     gap: 20px;
     padding: 20px 20px 40px;
     font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
 }
 
 .calcs__container > section {
