@@ -21,4 +21,8 @@ main .calcs__nav {
     height: 370px;
 }
 
-
+.square__inputs button:hover,
+.triangle__inputs button:hover,
+.circle__inputs button:hover {
+    font-weight: 700;
+}

@@ -176,6 +176,7 @@ main .calcs__nav {
     font-size: 100%;
     color: #fff;
     text-align: center;
+    border-radius: 8px;
 }
 input::placeholder {
     color: #777;
@@ -189,6 +190,8 @@ input::placeholder {
     color: #fff;
     border: 2px solid #fff;
     font-size: 1.6rem;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .square__inputs {
