@@ -1,0 +1,24 @@
+header h2 {
+    font-size: 2.8rem;
+}
+
+main .calcs__nav {
+    justify-content: left;
+}
+.calcs__nav ul a:hover li {
+    background-color: var(--pag-primary-color);
+    box-shadow: 4px 4px 3px 0 #bbb;
+}
+
+.calcs__figures {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.figure__container {
+    max-width: 480px;
+    height: 370px;
+}
+
+
