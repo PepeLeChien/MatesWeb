@@ -18,15 +18,25 @@ function calcularPerimetroTriangulo() {
     const base = Number(document.getElementById("input-triangle-base").value);
     const perimetro = lado1 + lado2 + base;
     const resultado = document.getElementById("result-triangle");
-    resultado.innerHTML = `El perímetro es ${perimetro}`;
+    if (lado1 && lado2 && base) {
+        resultado.innerHTML = `El perímetro es ${perimetro}`;
+    } else {
+        resultado.innerHTML = "Falta introducir un lado";
+    }
 }
 
 function calcularAreaTriangulo() {
     const base = document.getElementById("input-triangle-base").value;
     const altura = document.getElementById("input-triangle-height").value;
-    const area = (base * altura) / 2;
     const resultado = document.getElementById("result-triangle");
-    resultado.innerHTML = `El área es ${area} u^2`;
+    if (base && altura) {
+        const area = (base * altura) / 2;
+        resultado.innerHTML = `El área es ${area} u^2`;
+    } else if (!base) {
+        resultado.innerHTML = "Introduzca una base";
+    } else if (!altura) {
+        resultado.innerHTML = "Introduzca una altura";
+    }
 }
 
 function calcularPerimetroCirculo() {
