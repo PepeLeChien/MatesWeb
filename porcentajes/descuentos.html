@@ -6,24 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MatesWeb | Descuentos</title>
     <link rel="stylesheet" href="./descuentos.css">
+    <link rel="stylesheet" href="./descuentos-tablet.css" media="(min-width: 520px)">
+    <link rel="stylesheet" href="./descuentos-desktop.css" media="(min-width: 940px)">
 </head>
 <body>
     <header>
-        <h1>Descuentos</h1>
-        <nav>
+        <section>
+            <span></span>
+            <h1>MathWeb</h1>
+        </section>
+        <h2>Promedios</h2>
+    </header>
+    
+    <main>
+        <nav class="calcs__nav">
             <ul>
-                <li><a href="../index.html">Areas Y Perimetros</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../figuras/figuras.html">Figuras Geométricas</a></li>
                 <li><a href="../promedios/promedios.html">Promedios</a></li>
                 <li><a href="../salarios/salarios.html">Salarios</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
-        <h2>Porcentajes y Descuentos</h2>
+
         <section class="sections__container">
             <section class="discount__container">
                 <h3>Calcula el descuento de un producto</h3>
-                <form>
+                <img src="https://assets-global.website-files.com/5f4f67c5950db17954dd4f52/5fd22e81b2a5d92bf8471ba7_descuento-hiperb%C3%B3lico-1024x683.jpg" alt="">
+                <form class="discount__form form">
                     <label for="price--input" class="price--label">
                         Escribe el precio de tu producto ($)
                     </label>
@@ -34,12 +43,16 @@
                     <input type="number" id="discount--input" class="discount--input">
                     <button type="button" onclick="calcularPrecio()" class="discount--button">Calcular precio</button>
                 </form>
-                <p class="price--result" id="price--result"></p>
+                <div class="results">
+                    <p>Resultados:</p>
+                    <p class="price--result" id="price--result"></p>                
+                </div>
             </section>
 
             <section class="coupon__container">
                 <h3>Calcula el precio con cupón</h3>
-                <form>
+                <img src="https://franciscotorreblanca.es/wp-content/uploads/2017/04/cupones-descuento-estrategia-marketing.jpg" alt="">
+                <form class="coupon__form form">
                     <label for="coup-price--input" class="coup-price--label">
                         Escribe el precio de tu producto ($)
                     </label>
@@ -50,10 +63,31 @@
                     <input type="text" id="coup-discount--input" class="coup-discount--input" autocomplete="off">
                     <button type="button" onclick="calcularCupon()" class="coupon--button">Calcular precio</button>
                 </form>
-                <p class="coup-price--result" id="coup-price--result"></p>
+                <div class="results">
+                    <p>Resultado:</p>
+                    <p class="coup-price--result" id="coup-price--result"></p>                
+                </div>
             </section>
         </section>        
     </main>
+
+    <footer>
+        <h4>Contacto y Redes</h4>
+        <div>
+            <a href="https://github.com/PepeLeChien" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="g"></a>
+            <a href="https://www.facebook.com/Y-Que-Jugamos-748492291935911" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png" alt="f"></a>
+            <a href="https://twitter.com/PepeLeChien33" target="_blank"><img src="https://logodownload.org/wp-content/uploads/2014/09/twitter-logo-3.png" alt="t"></a>
+            <a href="https://www.instagram.com/fabrizio0943/" target="_blank"><img src="https://www.pngall.com/wp-content/uploads/5/Instagram-Logo-PNG-Image.png" alt="i"></a>
+        </div>
+        <nav>
+            <ul>
+                <li>© 2021 MathWeb | Fabrizio Loza</li>
+                <li><a href="./">Términos de uso</a></li>
+                <li><a href="./">Política de privacidad</a></li>
+                <li><a href="./">Aviso de cookies</a></li>
+            </ul>
+        </nav>
+    </footer>
 
 
     <script src="./descuentos.js"></script>

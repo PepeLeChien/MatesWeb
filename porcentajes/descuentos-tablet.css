@@ -1,0 +1,37 @@
+header h2 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.calcs__nav ul {
+    margin-top: 8px;
+}
+
+.calcs__nav ul a {
+    height: auto;
+    padding: 8px;
+    font-size: 2.2rem;
+}
+
+footer h4 {
+    font-size: 2rem;
+}
+
+footer div {
+    width: 270px;
+    height: 50px;
+    margin-bottom: 18px;
+}
+
+footer div a {
+    width: 40px;
+    height: 40px;
+}
+
+footer nav ul li:nth-child(1) {
+    font-size: 1.2rem;
+}
+footer nav ul li {
+    font-size: 1.6rem;
+}

@@ -1,0 +1,42 @@
+header h2 {
+    font-size: 2.8rem;
+}
+
+main .calcs__nav {
+    justify-content: left;
+}
+.calcs__nav ul {
+    overflow: hidden;
+}
+
+.calcs__nav ul a:hover {
+    background-color: var(--pag-primary-color);
+    box-shadow: 4px 4px 3px 0 #bbb;
+}
+
+main .sections__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.sections__container > section {
+    max-width: 480px;
+    min-height: 470px;
+}
+
+.sections__container > section img {
+    width: 200px;
+    height: 200px;
+}
+
+.form button{
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.form button:hover {
+    color: #000;
+    border: 2px solid var(--pag-primary-color);
+}
