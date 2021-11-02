@@ -30,6 +30,13 @@ main .calcs__container {
 
 .calcs__inputs button{
     font-size: 1.6rem;
+    cursor: pointer;
 }
+.calcs__inputs button:hover {
+    color: #000;
+}
+
+
+
 
 
