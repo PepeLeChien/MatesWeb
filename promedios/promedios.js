@@ -29,7 +29,6 @@ function calcularPromedio (lista) {
 
     const promedioLista = (sumaLista / lista.length).toFixed(2);
     visualAverage.innerHTML = `Promedio: ${promedioLista}`;
-    return promedioLista;
 }
 
 // [2,4,6,8].reduce(function(valorAnterior, valorActual){
@@ -46,7 +45,7 @@ function calcularMediana (arr) {
     if (array.length % 2 === 0){
         elemento1 = array[mitadLista - 1];
         elemento2 = array[mitadLista];
-        mediana = calcularPromedio([elemento1,elemento2]); 
+        mediana = (elemento1 + elemento2) / 2; 
     } else {
         mediana = array[mitadLista];
     }
@@ -56,6 +55,7 @@ function calcularMediana (arr) {
 
 function calcularModa (arr) {
     let objetcsArr = {};
+    const visualMode = document.getElementById("result-mode");
     arr.map(function(element){
         if (objetcsArr[element]) {
             objetcsArr[element] += 1;
@@ -73,5 +73,5 @@ function calcularModa (arr) {
         }
     })
     
-    return mCN;
+    visualMode.innerHTML = `Moda: ${mCN}`;
 }

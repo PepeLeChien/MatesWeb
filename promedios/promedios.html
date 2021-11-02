@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MatesWeb | Promedios</title>
     <link rel="stylesheet" href="./promedios.css">
+    <link rel="stylesheet" href="./promedios-tablet.css" media="(min-width: 520px)">
+    <link rel="stylesheet" href="./promedios-desktop.css" media="(min-width: 940px)">
 </head>
 <body>
     <header>
@@ -33,7 +35,7 @@
                 <p id="result-list">*Ningún número introducido*</p>
                 <p id="result-average">Promedio:___</p>
                 <p id="result-median">Mediana:___</p>
-                <p id="resulta-mode">Moda:___</p>
+                <p id="result-mode">Moda(s):___</p>
             </section>
     
             <section class="numbers__calc">
@@ -46,7 +48,7 @@
                     <button onclick="eliminarNumero()">Eliminar Último Número</button>
                     <button onclick="calcularPromedio(originalListArr)">Calcular Promedio</button>
                     <button onclick="calcularMediana(originalListArr)">Calcular Mediana</button>
-                    <button>Calcular Moda</button>
+                    <button onclick="calcularModa(originalListArr)">Calcular Moda</button>
                 </div>
             </section>
         </section>
