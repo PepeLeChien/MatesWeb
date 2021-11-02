@@ -41,11 +41,11 @@
                 <img src="https://rockcontent.com/es/wp-content/uploads/sites/3/2019/06/gobierno-de-datos.png" alt="">
                 <p>Introduce un número para agregar a la lista</p>
                 <div class="calcs__inputs">
-                    <input type="number">
-                    <button>Añadir Número</button>
-                    <button>Eliminar Último Número</button>
-                    <button>Calcular Promedio</button>
-                    <button>Calcular Mediana</button>
+                    <input type="number" id="number-input">
+                    <button onclick="añadirNumero()">Añadir Número</button>
+                    <button onclick="eliminarNumero()">Eliminar Último Número</button>
+                    <button onclick="calcularPromedio(originalListArr)">Calcular Promedio</button>
+                    <button onclick="calcularMediana(originalListArr)">Calcular Mediana</button>
                     <button>Calcular Moda</button>
                 </div>
             </section>

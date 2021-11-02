@@ -1,13 +1,34 @@
+let originalListArr = [];
+let visualList = document.getElementById("result-list");
+
+
+function añadirNumero() {
+    const numberInput = Number(document.getElementById("number-input").value);
+    originalListArr.push(numberInput);
+    visualList.innerHTML = originalListArr;
+}
+function eliminarNumero() {
+    originalListArr.pop();
+    if (originalListArr.length == 0) {
+        visualList.innerHTML = "*Ningún número introducido*";  
+    } else {
+        visualList.innerHTML = originalListArr;
+    }
+}
+
+
 function calcularPromedio (lista) {
     // let sumaLista = 0;
     // for (let i = 0 ; i < lista.length ; i++) {
     //     sumaLista += lista[i]; 
     // }
+    const visualAverage = document.getElementById("result-average");
     const sumaLista = lista.reduce( function (valorAcumulado = 0, nuevoElemento ) {
         return valorAcumulado + nuevoElemento;
     }); 
 
-    const promedioLista = sumaLista / lista.length;
+    const promedioLista = (sumaLista / lista.length).toFixed(2);
+    visualAverage.innerHTML = `Promedio: ${promedioLista}`;
     return promedioLista;
 }
 
@@ -18,6 +39,7 @@ function calcularPromedio (lista) {
 
 
 function calcularMediana (arr) {
+    let visualMedian = document.getElementById("result-median");
     let array = arr.sort((a,b) => a - b);
     let mediana;
     let mitadLista = parseInt(array.length / 2); 
@@ -28,7 +50,7 @@ function calcularMediana (arr) {
     } else {
         mediana = array[mitadLista];
     }
-    return mediana;
+    visualMedian.innerHTML = `Mediana: ${mediana}`;
 }
 
 
